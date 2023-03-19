@@ -20,6 +20,15 @@ def mp3_to_wav(mp3_path):
         subprocess.call(cmd, shell=True)
     return wav_path
 
+def flac_to_wav(flac_path):
+    wav_path = flac_path.replace(".flac", ".wav")
+    if os.path.isfile(wav_path):
+        pass
+    else:
+        cmd = "ffmpeg -i %s -acodec pcm_s16le -ac 1 -ar 16000 %s" % (flac_path, wav_path)
+        subprocess.call(cmd, shell=True)
+    return wav_path
+
 def wav_to_wav(wav1_path):
     wav2_path = wav1_path.split('.')[0] + '_1.wav'
     if os.path.isfile(wav2_path):
@@ -248,6 +257,8 @@ class Player(QWidget):
         if fileName != '':
             if 'mp3' in fileName.split('.'):
                 fileName = mp3_to_wav(fileName)
+            elif 'flac' in fileName.split('.'):
+                fileName = flac_to_wav(fileName)
             elif 'wav' in fileName.split('.'):
                 fileName = wav_to_wav(fileName)
             global t
