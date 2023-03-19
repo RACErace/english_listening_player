@@ -24,12 +24,9 @@ activate elp
 pip install -r requirements.txt
 ```
 
-安装ffmpeg(要将ffmpeg加入环境变量)
+安装ffmpeg(即将ffmpeg加入环境变量)
 
-[github](https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip)
 
-[百度网盘](https://pan.baidu.com/s/1e8C_dWc_-sPzUxkrdL-OQQ?pwd=1024)
-提取码：1024
 
 ## 运行程序
 ```bash
