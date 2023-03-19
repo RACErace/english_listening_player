@@ -254,16 +254,26 @@ class Player(QWidget):
             t = get_time(fileName)
             self.player.setMedia(QMediaContent(QUrl.fromLocalFile(fileName)))
             self.playButton.setEnabled(True)
-            self.Button0.setEnabled(True)
-            self.Button1.setEnabled(True)
-            self.Button2.setEnabled(True)
-            self.Button3.setEnabled(True)
-            self.Button4.setEnabled(True)
-            self.Button5.setEnabled(True)
-            self.Button6.setEnabled(True)
-            self.Button7.setEnabled(True)
-            self.Button8.setEnabled(True)
-            self.Button9.setEnabled(True)
+            if len(t) >= 1:
+                self.Button0.setEnabled(True)
+                if len(t) >= 2:
+                    self.Button1.setEnabled(True)
+                    if len(t) >= 3:
+                        self.Button2.setEnabled(True)
+                        if len(t) >= 4:
+                            self.Button3.setEnabled(True)
+                            if len(t) >= 5:
+                                self.Button4.setEnabled(True)
+                                if len(t) >= 6:
+                                    self.Button5.setEnabled(True)
+                                    if len(t) >= 7:
+                                        self.Button6.setEnabled(True)
+                                        if len(t) >= 8:
+                                            self.Button7.setEnabled(True)
+                                            if len(t) >= 9:
+                                                self.Button8.setEnabled(True)
+                                                if len(t) >= 10:
+                                                    self.Button9.setEnabled(True)
 
     def play(self):
         if self.player.state() == QMediaPlayer.PlayingState:
