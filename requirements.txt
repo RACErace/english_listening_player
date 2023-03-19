@@ -1,6 +1,5 @@
 PyQt5
 torch
 torchvision
-torchaudio
 soundfile
 numpy
