@@ -25,7 +25,9 @@ pip install -r requirements.txt
 ```
 
 安装ffmpeg(即将ffmpeg加入环境变量)
-
+```bash
+python setup.py
+```
 
 
 ## 运行程序
