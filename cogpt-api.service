@@ -1,0 +1,11 @@
+[Unit]
+Description=cogpt-api
+
+[Service]
+Restart=on-failure
+RestartSec=5s
+WorkingDirectory=/opt/cogpt
+ExecStart=/opt/cogpt/cogpt-api
+
+[Install]
+WantedBy=multi-user.target
